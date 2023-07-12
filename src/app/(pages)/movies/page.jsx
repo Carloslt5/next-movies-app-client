@@ -22,7 +22,6 @@ const Movies = () => {
         loadMovies()
     }, [])
 
-
     return (
         <div className="container-fluid px-5">
             <h1>MOVIES</h1>
