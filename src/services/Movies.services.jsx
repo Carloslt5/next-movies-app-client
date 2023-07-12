@@ -8,7 +8,11 @@ class MoviesServices {
     }
 
     getAllMovies() {
-        return this.axiosApp.get(`/movies/getAllMovies`)
+        return this.axiosApp.get(`/movies/`)
+    }
+
+    getOneMovie(id) {
+        return this.axiosApp.get(`/movies/${id}`)
     }
 }
 
