@@ -1,0 +1,27 @@
+img {
+    display: block;
+    height: inherit;
+    object-fit: cover;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card {
+    height: 100%;
+}
+
+.card article {
+    height: 20em;
+    overflow: hidden;
+}
+
+.card .card-body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+}
