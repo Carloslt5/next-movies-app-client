@@ -1,5 +1,5 @@
 
-const DetailsMovie = ({ _id, title, poster, imdb, }) => {
+const DetailsMovie = ({ _id, title, poster, fullplot, imdb, directors, writers }) => {
     return (
         <>
             <h1>{title}</h1>
@@ -16,12 +16,21 @@ const DetailsMovie = ({ _id, title, poster, imdb, }) => {
                         <hr />
                         <div>
                             <p className="card-text">
+                                <p><strong>Description:</strong></p>
+                                <p>{fullplot}</p>
+                                {
+                                    directors?.map(el => {
+                                        return (
+                                            <p><strong>Directors:</strong> {el}</p>
+                                        )
+                                    })
+                                }
                                 <strong>Rating:</strong> {imdb.rating}
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
             <hr />
         </>
     )

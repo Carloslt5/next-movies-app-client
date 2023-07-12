@@ -35,7 +35,6 @@ const MoviePage = () => {
                         : <div className="col-12">
                             <DetailsMovie {...movieData} />
                         </div>
-
                 }
             </div>
             <Link href={'/'} className='btn btn-dark me-2'>GO HOME</Link>
