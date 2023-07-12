@@ -15,7 +15,7 @@ a {
 }
 
 .card article {
-    height: 20em;
+    height: inherit;
     overflow: hidden;
 }
 
@@ -24,4 +24,10 @@ a {
     flex-flow: column nowrap;
     justify-content: space-between;
 
+}
+
+footer {
+    background-color: rgb(12, 12, 12);
+    padding: 1em 0em;
+    text-align: center;
 }

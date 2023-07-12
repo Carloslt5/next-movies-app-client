@@ -23,7 +23,7 @@ const Movies = () => {
     }, [])
 
     return (
-        <div className="container-fluid px-5">
+        <div className="container-fluid px-4 py-3">
             <h1>MOVIES</h1>
             <hr />
             <div className="row">

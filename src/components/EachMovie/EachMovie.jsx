@@ -5,7 +5,7 @@ const EachMovie = ({ _id, title, poster, imdb, }) => {
 
         <div className="card">
             <article>
-                <img src={poster} className="card-img-top" alt={poster} />
+                <img src={poster} className="card-img-top rounded" alt={poster} />
             </article>
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
