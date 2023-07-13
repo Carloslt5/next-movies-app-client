@@ -16,9 +16,9 @@ const DetailsMovie = ({ _id, title, poster, fullplot, imdb, directors, writers }
                             <p><strong>Description:</strong></p>
                             <p>{fullplot}</p>
                             {
-                                directors?.map(el => {
+                                directors?.map((el, index) => {
                                     return (
-                                        <p><strong>Directors:</strong> {el}</p>
+                                        <p key={index}><strong>Directors:</strong> {el}</p>
                                     )
                                 })
                             }

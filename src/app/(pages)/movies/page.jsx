@@ -55,9 +55,7 @@ const Movies = () => {
                     }
                 </div>
             </InfiniteScroll>
-            <button onClick={loadMoreHandler} className='d-block mx-auto btn btn-outline-secondary'>VIEW MORE...</button>
-            <hr />
-            <Link href={'/'} className='btn btn-dark'>GO HOME</Link>
+            {/* <button onClick={loadMoreHandler} className='d-block mx-auto btn btn-outline-secondary'>VIEW MORE...</button> */}
         </div >
     )
 }

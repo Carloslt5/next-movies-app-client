@@ -13,9 +13,9 @@ const EachMovie = ({ _id, title, poster, imdb, }) => {
                     <article className="card-text">
                         <p><strong>Rating:</strong> {imdb.rating}</p>
                     </article>
-                    <Link href={`/movies/${_id}`} className='btn btn-outline-dark' type="button">
+                    <button href={`/movies/${_id}`} className='btn btn-outline-dark' type="button">
                         View Details
-                    </Link>
+                    </button>
                 </div>
             </div>
         </div>
