@@ -10,9 +10,9 @@ const EachMovie = ({ _id, title, poster, imdb, }) => {
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <div>
-                    <p className="card-text">
-                        <strong>Rating:</strong> {imdb.rating}
-                    </p>
+                    <article className="card-text">
+                        <p><strong>Rating:</strong> {imdb.rating}</p>
+                    </article>
                     <Link href={`/movies/${_id}`} className='btn btn-outline-dark' type="button">
                         View Details
                     </Link>

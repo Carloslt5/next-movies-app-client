@@ -15,7 +15,7 @@ const DetailsMovie = ({ _id, title, poster, fullplot, imdb, directors, writers }
                         <h5 className="card-title mt-3 mt-sm-0">{title}</h5>
                         <hr />
                         <div>
-                            <p className="card-text">
+                            <article className="card-text" style={{ height: '100%' }}>
                                 <p><strong>Description:</strong></p>
                                 <p>{fullplot}</p>
                                 {
@@ -26,7 +26,7 @@ const DetailsMovie = ({ _id, title, poster, fullplot, imdb, directors, writers }
                                     })
                                 }
                                 <strong>Rating:</strong> {imdb.rating}
-                            </p>
+                            </article>
                         </div>
                     </div>
                 </div>

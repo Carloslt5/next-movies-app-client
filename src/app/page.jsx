@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './style/style.global.css'
+import '@/app/style/style.global.css'
 import Link from 'next/link'
 
 export default function Home() {

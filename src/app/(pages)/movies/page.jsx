@@ -40,9 +40,8 @@ const Movies = () => {
                     })
                 }
             </div>
-            <button className='btn d-block mx-auto btn-outline-secondary'>
-                <Link href={'#'} >VIEW MORE...</Link>
-            </button>
+
+            <Link href={'#'} className='d-block mx-auto btn btn-outline-secondary' >VIEW MORE...</Link>
 
             <hr />
             <Link href={'/'} className='btn btn-dark'>GO HOME</Link>
