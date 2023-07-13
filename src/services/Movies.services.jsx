@@ -7,8 +7,9 @@ class MoviesServices {
         })
     }
 
-    getMovies(limitMovies) {
-        return this.axiosApp.get('/movies', { limitMovies })
+    getMovies(params = {}) {
+        const URLparams = new URLSearchParams(params)
+        return this.axiosApp.get(`/movies/?${URLparams.toString()}`)
     }
 
     getOneMovie(id) {
