@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
 import '@/app/style/style.global.css'
 import Link from 'next/link'
 
