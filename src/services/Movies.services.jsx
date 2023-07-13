@@ -7,13 +7,14 @@ class MoviesServices {
         })
     }
 
-    getAllMovies() {
-        return this.axiosApp.get(`/movies/`)
+    getMovies(limitMovies) {
+        return this.axiosApp.get('/movies', { limitMovies })
     }
 
     getOneMovie(id) {
         return this.axiosApp.get(`/movies/${id}`)
     }
+
 }
 
 const moviesServices = new MoviesServices()

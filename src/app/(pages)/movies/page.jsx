@@ -8,19 +8,26 @@ import Loader from '@/components/Loader/Loader'
 const Movies = () => {
 
     const [moviesData, setMoviesData] = useState()
+    const [limitMovies, setLimitMovies] = useState(4)
 
-    const loadMovies = () => {
-        moviesServices
-            .getAllMovies()
-            .then(({ data }) => {
-                setMoviesData(data)
-            })
-            .catch(err => console.log(err))
+    const loadMovies = async () => {
+
+        try {
+            const movie = await moviesServices.getMovies().then(({ data }) => setMoviesData(data))
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     useEffect(() => {
         loadMovies()
-    }, [])
+    }, [limitMovies])
+
+    const loadMoreHandler = () => {
+        setLimitMovies(limitMovies + 4)
+        console.log('Aumentado el limite', limitMovies)
+    }
+
 
     return (
         <div className="container-fluid px-4 py-3">
@@ -29,7 +36,7 @@ const Movies = () => {
             <div className="row">
                 {!moviesData
                     ? <Loader />
-                    : moviesData.map(movie => {
+                    : moviesData.slice(0, limitMovies).map(movie => {
                         return (
                             <div key={movie._id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                                 <Link href={`/movies/${movie._id}`}>
@@ -41,7 +48,7 @@ const Movies = () => {
                 }
             </div>
 
-            <Link href={'#'} className='d-block mx-auto btn btn-outline-secondary' >VIEW MORE...</Link>
+            <button onClick={loadMoreHandler} className='d-block mx-auto btn btn-outline-secondary'>VIEW MORE...</button>
 
             <hr />
             <Link href={'/'} className='btn btn-dark'>GO HOME</Link>
