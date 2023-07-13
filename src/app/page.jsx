@@ -1,4 +1,3 @@
-import '@/app/style/style.global.css'
 import Link from 'next/link'
 
 export default function Home() {

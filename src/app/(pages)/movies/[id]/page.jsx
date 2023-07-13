@@ -26,19 +26,20 @@ const MoviePage = () => {
     }, [])
 
     return (
-        <div className="container-fluid px-5">
+        <div className="container-fluid px-4 py-2">
             <div className="row">
-                <hr />
                 {
                     !movieData
                         ? <Loader />
-                        : <div className="col-12">
-                            <DetailsMovie {...movieData} />
+                        : <div className="col-12 ">
+                            <div className="card px-2 py-2">
+                                <DetailsMovie {...movieData} />
+                            </div>
                         </div>
                 }
             </div>
-            <Link href={'/'} className='btn btn-dark me-2'>GO HOME</Link>
-            <Link href={'/movies'} className='btn btn-dark'>View Movies</Link>
+            <Link href={'/'} className='btn btn-dark me-2 my-2'>GO HOME</Link>
+            <Link href={'/movies'} className='btn btn-dark my-2'>View Movies</Link>
 
         </div >
     )

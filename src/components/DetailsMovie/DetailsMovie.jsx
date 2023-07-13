@@ -27,7 +27,6 @@ const DetailsMovie = ({ _id, title, poster, fullplot, imdb, directors, writers }
                     </div>
                 </div>
             </div >
-            <hr />
         </>
     )
 }
